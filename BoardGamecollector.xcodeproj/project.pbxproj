@@ -15,6 +15,9 @@
 		E051F92D1E31AF120013A5AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E051F92B1E31AF120013A5AA /* LaunchScreen.storyboard */; };
 		E051F9381E31AF120013A5AA /* BoardGamecollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051F9371E31AF120013A5AA /* BoardGamecollectorTests.swift */; };
 		E051F9431E31AF120013A5AA /* BoardGamecollectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051F9421E31AF120013A5AA /* BoardGamecollectorUITests.swift */; };
+		E051F9511E31BEFC0013A5AA /* pic3348271_md.png in Resources */ = {isa = PBXBuildFile; fileRef = E051F9501E31BEFC0013A5AA /* pic3348271_md.png */; };
+		E051F9531E31C0D00013A5AA /* the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png in Resources */ = {isa = PBXBuildFile; fileRef = E051F9521E31C0D00013A5AA /* the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png */; };
+		E051F9551E31C6520013A5AA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051F9541E31C6520013A5AA /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		E051F93E1E31AF120013A5AA /* BoardGamecollectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardGamecollectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E051F9421E31AF120013A5AA /* BoardGamecollectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGamecollectorUITests.swift; sourceTree = "<group>"; };
 		E051F9441E31AF120013A5AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E051F9501E31BEFC0013A5AA /* pic3348271_md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic3348271_md.png; sourceTree = "<group>"; };
+		E051F9521E31C0D00013A5AA /* the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png"; sourceTree = "<group>"; };
+		E051F9541E31C6520013A5AA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +107,14 @@
 			children = (
 				E051F91F1E31AF120013A5AA /* AppDelegate.swift */,
 				E051F9211E31AF120013A5AA /* ViewController.swift */,
+				E051F9521E31C0D00013A5AA /* the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png */,
+				E051F9541E31C6520013A5AA /* GameViewController.swift */,
 				E051F9231E31AF120013A5AA /* Main.storyboard */,
 				E051F9291E31AF120013A5AA /* Assets.xcassets */,
 				E051F92B1E31AF120013A5AA /* LaunchScreen.storyboard */,
 				E051F92E1E31AF120013A5AA /* Info.plist */,
 				E051F9261E31AF120013A5AA /* BoardGamecollector.xcdatamodeld */,
+				E051F9501E31BEFC0013A5AA /* pic3348271_md.png */,
 			);
 			path = BoardGamecollector;
 			sourceTree = "<group>";
@@ -235,6 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E051F9531E31C0D00013A5AA /* the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png in Resources */,
+				E051F9511E31BEFC0013A5AA /* pic3348271_md.png in Resources */,
 				E051F92D1E31AF120013A5AA /* LaunchScreen.storyboard in Resources */,
 				E051F92A1E31AF120013A5AA /* Assets.xcassets in Resources */,
 				E051F9251E31AF120013A5AA /* Main.storyboard in Resources */,
@@ -262,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E051F9551E31C6520013A5AA /* GameViewController.swift in Sources */,
 				E051F9221E31AF120013A5AA /* ViewController.swift in Sources */,
 				E051F9201E31AF120013A5AA /* AppDelegate.swift in Sources */,
 				E051F9281E31AF120013A5AA /* BoardGamecollector.xcdatamodeld in Sources */,
