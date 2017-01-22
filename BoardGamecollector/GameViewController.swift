@@ -27,7 +27,8 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker.delegate = self
         
         if game != nil {
-            print("We have a game")
+            gameImgView.image = UIImage(data: game!.image as! Data)
+            titleTextField.text = game!.title
         } else {
             print("we don't have a game")
         }
