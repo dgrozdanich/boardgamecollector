@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" id="RRd-2d-Yhr">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IoT-mv-LEN">
                             <connections>
-                                <segue destination="8jd-Ki-G4D" kind="show" id="hIe-zy-aPn"/>
+                                <segue destination="8jd-Ki-G4D" kind="show" identifier="gameSegue" id="hIe-zy-aPn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

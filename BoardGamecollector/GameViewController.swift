@@ -16,12 +16,21 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var imagePicker = UIImagePickerController()
     
+    var game : Game? = nil
     
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         imagePicker.delegate = self
+        
+        if game != nil {
+            print("We have a game")
+        } else {
+            print("we don't have a game")
+        }
         
        
     }
