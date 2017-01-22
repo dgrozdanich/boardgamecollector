@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,20 +67,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-er-shF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_settlers_of_catan_board_game_by_ninjawolfx-d5ucfsn-e1447402932468.png" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-er-shF">
                                 <rect key="frame" x="47" y="84" width="280" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="M5O-CF-wU5"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53g-UF-rUR">
-                                <rect key="frame" x="47" y="254" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53g-UF-rUR">
+                                <rect key="frame" x="62.5" y="254" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="USI-yu-BJo"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-1E-sdX">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-1E-sdX">
+                                <rect key="frame" x="137" y="318" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fWF-4c-1mG"/>
+                                </constraints>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="8jd-Ki-G4D" eventType="touchUpInside" id="V7c-9a-19T"/>
@@ -87,6 +94,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hfc-1E-sdX" firstAttribute="centerX" secondItem="Pfq-JQ-sVf" secondAttribute="centerX" id="2Fl-XO-knV"/>
+                            <constraint firstItem="hfc-1E-sdX" firstAttribute="centerY" secondItem="Pfq-JQ-sVf" secondAttribute="centerY" id="7iL-jz-lPf"/>
+                            <constraint firstItem="hfc-1E-sdX" firstAttribute="centerX" secondItem="hQt-er-shF" secondAttribute="centerX" id="GZE-a0-ckh"/>
+                            <constraint firstItem="hQt-er-shF" firstAttribute="leading" secondItem="Pfq-JQ-sVf" secondAttribute="leadingMargin" constant="31" id="fgy-Yb-vHu"/>
+                            <constraint firstItem="hfc-1E-sdX" firstAttribute="centerX" secondItem="53g-UF-rUR" secondAttribute="centerX" id="iWO-O3-vb1"/>
+                            <constraint firstItem="hQt-er-shF" firstAttribute="top" secondItem="OPW-S8-lyW" secondAttribute="bottom" constant="20" id="m21-Lu-cPw"/>
+                            <constraint firstItem="hfc-1E-sdX" firstAttribute="top" secondItem="53g-UF-rUR" secondAttribute="bottom" constant="34" id="nQY-qp-feG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jwj-e0-k8c">
                         <rightBarButtonItems>
@@ -103,6 +119,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="hfc-1E-sdX" id="Oxr-JR-ctP"/>
                         <outlet property="gameImgView" destination="hQt-er-shF" id="EZA-3h-uSE"/>
                         <outlet property="titleTextField" destination="53g-UF-rUR" id="gAy-t1-cLB"/>
                     </connections>

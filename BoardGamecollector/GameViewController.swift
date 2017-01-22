@@ -14,6 +14,8 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var addUpdateButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
     
     var game : Game? = nil
@@ -29,6 +31,7 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if game != nil {
             gameImgView.image = UIImage(data: game!.image as! Data)
             titleTextField.text = game!.title
+            addUpdateButton.setTitle("Update", for: .normal)
         } else {
             print("we don't have a game")
         }
