@@ -62,22 +62,27 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
    
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func addTapped(_ sender: Any) {
         if game != nil {
+            
             game!.title = titleTextField.text
-            game!.image = UIImagePNGRepresentation(gameImgView.image!)
-                as NSData?
+            game!.image = UIImagePNGRepresentation(gameImgView.image!) as NSData?
         } else {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
             let game = Game(context: context)
             game.title = titleTextField.text
-            game.image = UIImagePNGRepresentation(gameImgView.image!)
-                as NSData?
-            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            game.image = UIImagePNGRepresentation(gameImgView.image!) as NSData?
+            
         }
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         navigationController!.popViewController(animated: true)
     }
@@ -85,6 +90,7 @@ class GameViewController: UIViewController, UIImagePickerControllerDelegate, UIN
          let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         context.delete(game!)
+        
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
          navigationController!.popViewController(animated: true)
     }
